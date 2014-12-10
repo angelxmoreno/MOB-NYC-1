@@ -1,0 +1,3 @@
+Hello! My name is Angel S. Moreno. I was born in the Dominican Republic and grew up in the Bronx. I am currently the CTO of a small EdTech start-up called Qlovi.
+
+I love creating web applications and I am taking this course to obtain mobile development super powers. 
