@@ -211,17 +211,14 @@ I love creating web applications. I am currently mentoring two students with no 
                                 <nil key="highlightedColor"/>
                             </label>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nve-Ci-Y7M">
-                                <rect key="frame" x="139" y="337" width="78" height="31"/>
+                                <rect key="frame" x="139" y="337" width="51" height="34"/>
                                 <color key="backgroundColor" red="0.25490196078431371" green="0.81960784313725488" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="78" id="veZ-ZV-jvW"/>
-                                </constraints>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" red="0.99607843137254903" green="0.83921568627450982" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="AAz-KS-PCS"/>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="Vfu-0x-Mts"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wBk-Hu-bdH">
@@ -235,16 +232,15 @@ I love creating web applications. I am currently mentoring two students with no 
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.86526601666173875" blue="0.64532279643851576" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="FvY-rH-CCN" firstAttribute="top" secondItem="nve-Ci-Y7M" secondAttribute="bottom" constant="232" id="2wM-Zs-bxf"/>
+                            <constraint firstItem="nve-Ci-Y7M" firstAttribute="top" secondItem="k8D-bh-sih" secondAttribute="bottom" constant="22" id="2K4-dO-cbh"/>
                             <constraint firstItem="LWy-Td-mCi" firstAttribute="leading" secondItem="5Ni-x9-qIB" secondAttribute="trailing" constant="8" symbolic="YES" id="4oI-6V-yKQ"/>
                             <constraint firstItem="UuV-De-6Hs" firstAttribute="leading" secondItem="k8D-bh-sih" secondAttribute="trailing" constant="8" symbolic="YES" id="8sJ-Ld-xpH"/>
+                            <constraint firstItem="nve-Ci-Y7M" firstAttribute="leading" secondItem="BF9-vA-WH9" secondAttribute="leading" constant="139" id="MOM-kp-nD4"/>
                             <constraint firstItem="UuV-De-6Hs" firstAttribute="bottom" secondItem="k8D-bh-sih" secondAttribute="bottom" id="OVv-18-G0p"/>
                             <constraint firstItem="UuV-De-6Hs" firstAttribute="leading" secondItem="LWy-Td-mCi" secondAttribute="leading" id="QQT-3Z-rpZ"/>
                             <constraint firstItem="aIB-EA-Has" firstAttribute="top" secondItem="YbR-h2-U2h" secondAttribute="bottom" constant="139" id="TFl-Xj-6Sx"/>
                             <constraint firstItem="k8D-bh-sih" firstAttribute="top" secondItem="5Ni-x9-qIB" secondAttribute="bottom" constant="23" id="Yik-Oe-vfM"/>
-                            <constraint firstItem="nve-Ci-Y7M" firstAttribute="leading" secondItem="BF9-vA-WH9" secondAttribute="leading" constant="139" id="cA4-JE-mkm"/>
                             <constraint firstItem="k8D-bh-sih" firstAttribute="leading" secondItem="BF9-vA-WH9" secondAttribute="leadingMargin" constant="42" id="ci3-tW-7Ku"/>
-                            <constraint firstItem="nve-Ci-Y7M" firstAttribute="top" secondItem="k8D-bh-sih" secondAttribute="bottom" constant="22" id="d1N-tz-9Ox"/>
                             <constraint firstItem="5Ni-x9-qIB" firstAttribute="top" secondItem="aIB-EA-Has" secondAttribute="bottom" constant="26" id="e18-cg-1Q0"/>
                             <constraint firstItem="LWy-Td-mCi" firstAttribute="top" secondItem="wBk-Hu-bdH" secondAttribute="bottom" constant="17" id="hle-4o-gyv"/>
                             <constraint firstItem="wBk-Hu-bdH" firstAttribute="leading" secondItem="aIB-EA-Has" secondAttribute="trailing" constant="8" symbolic="YES" id="ipU-qf-KHc"/>
@@ -264,8 +260,8 @@ I love creating web applications. I am currently mentoring two students with no 
         <image name="profile pic" width="1080" height="720"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="net-Cb-iTa"/>
-        <segue reference="7BX-d6-agV"/>
         <segue reference="xrs-uQ-OrP"/>
+        <segue reference="7BX-d6-agV"/>
+        <segue reference="Vfu-0x-Mts"/>
     </inferredMetricsTieBreakers>
 </document>
