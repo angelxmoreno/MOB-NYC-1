@@ -175,35 +175,47 @@ I love creating web applications. I am currently mentoring two students with no 
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIB-EA-Has">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIB-EA-Has">
                                 <rect key="frame" x="61" y="203" width="115" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="SWF-3N-7SQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ni-x9-qIB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ni-x9-qIB">
                                 <rect key="frame" x="95" y="250" width="81" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="fE4-XR-Y4A"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LWy-Td-mCi">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LWy-Td-mCi">
                                 <rect key="frame" x="184" y="246" width="120" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UuV-De-6Hs">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UuV-De-6Hs">
                                 <rect key="frame" x="184" y="284" width="51" height="31"/>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember Me:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8D-bh-sih">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember Me:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8D-bh-sih">
                                 <rect key="frame" x="58" y="294" width="118" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="hsU-B0-BfE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nve-Ci-Y7M">
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nve-Ci-Y7M">
                                 <rect key="frame" x="139" y="337" width="78" height="31"/>
                                 <color key="backgroundColor" red="0.25490196078431371" green="0.81960784313725488" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="veZ-ZV-jvW"/>
+                                </constraints>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" red="0.99607843137254903" green="0.83921568627450982" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -212,13 +224,34 @@ I love creating web applications. I am currently mentoring two students with no 
                                     <segue destination="vXZ-lx-hvc" kind="show" id="AAz-KS-PCS"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wBk-Hu-bdH">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wBk-Hu-bdH">
                                 <rect key="frame" x="184" y="199" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="vPu-mz-Z56"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.86526601666173875" blue="0.64532279643851576" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FvY-rH-CCN" firstAttribute="top" secondItem="nve-Ci-Y7M" secondAttribute="bottom" constant="232" id="2wM-Zs-bxf"/>
+                            <constraint firstItem="LWy-Td-mCi" firstAttribute="leading" secondItem="5Ni-x9-qIB" secondAttribute="trailing" constant="8" symbolic="YES" id="4oI-6V-yKQ"/>
+                            <constraint firstItem="UuV-De-6Hs" firstAttribute="leading" secondItem="k8D-bh-sih" secondAttribute="trailing" constant="8" symbolic="YES" id="8sJ-Ld-xpH"/>
+                            <constraint firstItem="UuV-De-6Hs" firstAttribute="bottom" secondItem="k8D-bh-sih" secondAttribute="bottom" id="OVv-18-G0p"/>
+                            <constraint firstItem="UuV-De-6Hs" firstAttribute="leading" secondItem="LWy-Td-mCi" secondAttribute="leading" id="QQT-3Z-rpZ"/>
+                            <constraint firstItem="aIB-EA-Has" firstAttribute="top" secondItem="YbR-h2-U2h" secondAttribute="bottom" constant="139" id="TFl-Xj-6Sx"/>
+                            <constraint firstItem="k8D-bh-sih" firstAttribute="top" secondItem="5Ni-x9-qIB" secondAttribute="bottom" constant="23" id="Yik-Oe-vfM"/>
+                            <constraint firstItem="nve-Ci-Y7M" firstAttribute="leading" secondItem="BF9-vA-WH9" secondAttribute="leading" constant="139" id="cA4-JE-mkm"/>
+                            <constraint firstItem="k8D-bh-sih" firstAttribute="leading" secondItem="BF9-vA-WH9" secondAttribute="leadingMargin" constant="42" id="ci3-tW-7Ku"/>
+                            <constraint firstItem="nve-Ci-Y7M" firstAttribute="top" secondItem="k8D-bh-sih" secondAttribute="bottom" constant="22" id="d1N-tz-9Ox"/>
+                            <constraint firstItem="5Ni-x9-qIB" firstAttribute="top" secondItem="aIB-EA-Has" secondAttribute="bottom" constant="26" id="e18-cg-1Q0"/>
+                            <constraint firstItem="LWy-Td-mCi" firstAttribute="top" secondItem="wBk-Hu-bdH" secondAttribute="bottom" constant="17" id="hle-4o-gyv"/>
+                            <constraint firstItem="wBk-Hu-bdH" firstAttribute="leading" secondItem="aIB-EA-Has" secondAttribute="trailing" constant="8" symbolic="YES" id="ipU-qf-KHc"/>
+                            <constraint firstItem="UuV-De-6Hs" firstAttribute="top" secondItem="LWy-Td-mCi" secondAttribute="bottom" constant="8" symbolic="YES" id="kCB-B4-pua"/>
+                            <constraint firstItem="LWy-Td-mCi" firstAttribute="leading" secondItem="wBk-Hu-bdH" secondAttribute="leading" id="kdR-Rk-2zK"/>
+                            <constraint firstItem="wBk-Hu-bdH" firstAttribute="trailing" secondItem="LWy-Td-mCi" secondAttribute="trailing" id="vLD-if-0gO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="AfH-nN-Avn"/>
                 </viewController>
@@ -231,8 +264,8 @@ I love creating web applications. I am currently mentoring two students with no 
         <image name="profile pic" width="1080" height="720"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xrs-uQ-OrP"/>
+        <segue reference="net-Cb-iTa"/>
         <segue reference="7BX-d6-agV"/>
-        <segue reference="AAz-KS-PCS"/>
+        <segue reference="xrs-uQ-OrP"/>
     </inferredMetricsTieBreakers>
 </document>
