@@ -45,34 +45,113 @@ func printOptional(val:String?){
     }
     println(output);
 }
-printOptional("Anti Hero")
-printOptional(nil)
+//printOptional("Anti Hero")
+//printOptional(nil)
 
 // TODO: Write a function that takes one parameter, n, and returns an integer, the nth series in the fibonacci
 // sequence. The first fibonacci number is 0, the second is 1, the third is 1, the fourth is 2, fifth is 3, sixth is 5, etc. fibonacci numbers at sequence n are the sum of the n-1 and n-2 fibonacci number.
 
+
+/**
+create an array from the 0th fibonacci to the 50th
+**/
+func fillFibonacci() -> [Int]{
+    var fibonacci = [0,0,1,1,2,3,5];
+    var newFibonacci = 0;
+
+    for pos in fibonacci.count...50 {
+        newFibonacci = fibonacci[pos - 1] + fibonacci[pos - 2]
+        fibonacci.append(newFibonacci);
+    }
+    
+    return fibonacci;
+}
+
+let fibonacciSequence = fillFibonacci();
+
+func nthFibonacci(pos: Int) -> Int{
+    return fibonacciSequence[pos]
+}
+
 // TODO: Write a function that calls the above function in order to print the sum of the first 20 fibonacci numbers.
-//blah
+
+func sumFibonacci(endIndex: Int) -> Int{
+    //@todo i should check if endIndex is greater than the size of the fibonacciSequence Array
+    var sum = 0
+    for pos in 1...endIndex {
+        sum += fibonacciSequence[pos]
+    }
+    return sum
+}
+
+println(sumFibonacci(4))
+println(sumFibonacci(10))
+println(sumFibonacci(20))
 
 
 // TODO: Write a function that takes in a number and prints out whether it is prime, composite or neither.
 
+func hasPositiveDivisors(number: Int) -> Bool {
+    var endIndex = number - 1
+    for i in 2...endIndex {
+        if(number % i == 0){
+            return true
+        }
+    }
+    return false
+}
+
+func isPrime(number:Int) -> Bool? {
+    
+    if(number < 2){
+        //0,1 should return nil
+        return nil
+    }
+    
+    if(number < 4){
+        //2,3 should return prime
+        return true
+    }
+    
+    return hasPositiveDivisors(number);
+}
+
+func primeCheck(number: Int) -> String {
+    var check = isPrime(number)
+    if  check != nil {
+        if(check!){
+            return "Prime"
+        } else {
+            return "Even"
+        }
+    } else {
+        return "neither";
+    }
+}
+
+var type: String;
+for i in 0...10 {
+    type = primeCheck(i)
+    println("The number \(i) is \(type)")
+}
 // TODO: Write a function that prints out each of the first 20 fibonacci numbers and whether they are prime. (e.g. 0 is not prime or composite, 1 is prime, etc)
 
 // TODO: Write a function that takes in two numbers, a bill amount and an optional tip percentage (represented as a float, e.g. .2 = 20% tip). Return a tuple with the total bill amount and the tip amount (if included).
 
-func calTotalAmount(bill: Float, tipPercent: Float) -> (Float, Float) {
-    return (bill, bill*tipPercent)
+func calTip(bill: Float, tipPercent: Float) -> (Float, Float) {
+    var tipAmount = bill*tipPercent
+    var tipToal = bill + tipAmount
+    return (tipToal, tipAmount)
 }
 
 func printTotalAmount(bill: Float, tipPercent: Float){
-    var calulcatedTotal = calTotalAmount(bill, tipPercent)
+    var calulcatedTotal = calTip(bill, tipPercent)
+    var total = calulcatedTotal.0
     var tip = calulcatedTotal.1
-    var total = bill + tip;
-    println("Your bill is $\(bill) with an optinal tip of $\(tip) totalling $\(total)")
+    println("Your total bill is $\(total) with an optinal tip of $\(tip)")
 }
 
-printTotalAmount(10.00, 0.20);
+printTotalAmount(10.00, 0.15);
 
 // TODO: Write a function that takes in a string and returns a string that is the reverse of the input. Append two strings using the + operator.
 
@@ -125,7 +204,28 @@ isPalindrome(bString);
 isPalindrome(cString);
 
 // BONUS TODO: Write a function that takes in two strings and returns a boolean indicating whether the two strings
-//@todo the two strings are what Mr. T ?
+//@todo the two strings are what Mr. T ? - BONUS TODO: Write a function that takes in two strings and returns a boolean indicating whether the two strings have the same number of lowercase 'a's in them
+func countChar(string:String, charMatch: Character) -> Int {
+    var counter = 0;
+    for char in string {
+        if(char == charMatch) {
+            counter++;
+        }
+    }
+    
+    return counter;
+}
+
+func charComparision(stringA: String, stringB:String, char: Character) -> Bool {
+    return countChar(stringA, char) == countChar(stringB, char);
+}
+
+func stringCompareCountCharA(stringA :String, stringB : String) -> Bool {
+    return charComparision(stringA, stringB, "a");
+}
+
+println(stringCompareCountCharA("Bob", "Annie"));
+println(stringCompareCountCharA("Bob", "Tom"));
 
 // BONUS TODO: Write a function that accepts two parameters, a string and a function that accepts a string and returns a string. Print the result of passing the string into the function 10 times.
 
