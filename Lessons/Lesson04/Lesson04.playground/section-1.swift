@@ -136,12 +136,60 @@ for i in 0...10 {
 }
 // TODO: Write a function that prints out each of the first 20 fibonacci numbers and whether they are prime. (e.g. 0 is not prime or composite, 1 is prime, etc)
 
+func fibNumber(n: Int) -> Int {
+    var n1 = 0, n2 = 1, n3 = 1
+    if n <= 0 {
+        return -1
+    } else if n == 1 {
+        return n1
+    } else if n == 2 {
+        return n2
+    } else if n == 3 {
+        return n3
+    } else {
+        for counter in 4...n {
+            n1 = n2
+            n2 = n3
+            n3 = n1 + n2
+        }
+        return n3
+    }
+}
+
+func primeDetector(testNumber: Int) -> String {
+    
+    let neither = "neither"
+    let prime = "prime"
+    let composite = "composite"
+    
+    //identify exceptional ints, -, 0, 1, 2
+    if testNumber <= 1 {
+        return neither
+    } else if testNumber == 2 {
+        return prime
+    } else {
+        //divide testNumber by each number that is smaller than it
+        for i in 2...(testNumber - 1) {
+            if testNumber % i == 0 {
+                return composite
+            }
+        }
+        //give result
+        return prime
+    }
+}
+
+func fibPrimeCheck(counter: Int) -> String {
+    return primeDetector(fibNumber(counter))
+}
+
+fibPrimeCheck(6)
 // TODO: Write a function that takes in two numbers, a bill amount and an optional tip percentage (represented as a float, e.g. .2 = 20% tip). Return a tuple with the total bill amount and the tip amount (if included).
 
 func calTip(bill: Float, tipPercent: Float) -> (Float, Float) {
     var tipAmount = bill*tipPercent
-    var tipToal = bill + tipAmount
-    return (tipToal, tipAmount)
+    var tipTotal = bill + tipAmount
+    return (tipTotal, tipAmount)
 }
 
 func printTotalAmount(bill: Float, tipPercent: Float){
@@ -160,10 +208,9 @@ var bString = "Bob"
 var cString = "ana"
 
 func reverseString(string2analyze: String) -> String {
-    var reversedString = String();
-    var stringLength = string2analyze.endIndex;
+    var reversedString = String()
     for character in string2analyze {
-        reversedString = [character] + reversedString;
+        reversedString = [character] + reversedString
     }
     
     return reversedString;
