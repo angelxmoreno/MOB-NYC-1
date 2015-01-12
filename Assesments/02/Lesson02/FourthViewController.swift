@@ -21,16 +21,28 @@ class FourthViewController: UIViewController {
     
     @IBAction func calIndex(sender: AnyObject) {
         if let index = numInput.text.toInt() {
-            var foo = fibonacciAdder()
-            numLabel.text = "\(foo.fibonacciNumberAtIndex(index))"
+            let fibAdder = FibonacciAdder()
+            fibAdder.fillFibonacci()
+            let result = fibAdder.fibonacciNumberAtIndex(index)
+            numLabel.text = "\(result)"
         }
     }
     
 }
 
-class fibonacciAdder {
-    func fibonacciNumberAtIndex(index: Int) -> Int {
-        
-        return index
+class FibonacciAdder {
+    var fibonacciSequence = [0,0,1,1,2,3,5]
+    
+    func fillFibonacci() {
+        var newFibonacci = 0
+        for pos in fibonacciSequence.count...50 {
+            newFibonacci = fibonacciSequence[pos - 1] + fibonacciSequence[pos - 2]
+            fibonacciSequence.append(newFibonacci)
+        }
     }
+    
+    func fibonacciNumberAtIndex(pos: Int) -> Int{
+        return fibonacciSequence[pos]
+    }
+    
 }
