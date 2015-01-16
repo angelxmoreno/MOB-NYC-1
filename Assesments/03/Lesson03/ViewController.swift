@@ -16,6 +16,32 @@ class ViewController: UIViewController {
     TODO three: Add and hook up a ‘dismiss’ button below the above mentioned image view that will dismiss the modal dialog. Do this in CODE.
     TODO four: Hook up the button on the home screen to push ArrayTableViewController into view (via the navigation controller) when tapped. Do this by triggering a segue from this view controller. The method you are looking for is performSegueWithIdentifier. Find the identifier from the storyboard.
     */
+    @IBOutlet var todoSwipeable: UILabel!
+    let swipeRecognizer = UISwipeGestureRecognizer()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        swipeRecognizer.addTarget(self, action: "didSwipe")
+        swipeRecognizer.direction = UISwipeGestureRecognizerDirection.Up
+        todoSwipeable.addGestureRecognizer(swipeRecognizer)
+        todoSwipeable.userInteractionEnabled = true
+    }
+    
+//    func createModalScreen() -> UIViewController {
+//        let modalScreen = UIViewController()
+//        let imgView = UIImage()
+//        
+//        modalScreen.view.backgroundColor = UIColor.blueColor()
+//
+//        return modalScreen
+//    }
+    
+    func didSwipe(){
+        performSegueWithIdentifier("showModalSegue", sender: nil)
+    }
 
+    @IBAction func showTableViewController(sender: AnyObject) {
+        performSegueWithIdentifier("show", sender: nil)
+    }
 }
 

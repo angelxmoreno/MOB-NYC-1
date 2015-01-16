@@ -22,6 +22,9 @@ class ModalViewController: UIViewController {
     }
     
 
+    @IBAction func dimissModal(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
