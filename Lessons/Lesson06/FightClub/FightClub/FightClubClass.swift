@@ -21,7 +21,6 @@ class Player {
     var health: Int = 100
     var str: Int
     var def: Int
-    var atkMessage: String = "POW"
     var type: String?
     
     init(){
@@ -293,7 +292,7 @@ class Match{
             }
             round(attacker, defender:defender)
         }
-        println("\"\(winnerName(player1, p2: player2))\" wins!")
+        println("\"\(whoWon().name)\" wins!")
         return whoWon()
     }
     
@@ -309,14 +308,6 @@ class Match{
             print("\"\(defender.name)\" dies. ")
         }
         
-    }
-    
-    func winnerName(p1: Player, p2: Player) -> String{
-        if(p1.isAlive()){
-            return p1.name
-        } else {
-            return p2.name
-        }
     }
     
     func whoWon() -> Player {
@@ -337,82 +328,7 @@ class Match{
     }
     
 }
-class Team{
-    let name: String
-    let size: Int
-    let type: String
-    let valid_types = ["Hero", "Villian"]
-    var members: [Player] = []
-    
-    init(team_name: String, num_players: Int, are_heroes: Bool){
-        self.name = team_name
-        self.size = num_players
-        //        if are_heroes {
-        //            self.type = self.valid_types.first!
-        //            self.members = createHeroes()
-        //        } else {
-        //            self.type = self.valid_types.last!
-        //            self.members = createVillians()
-        //        }
-        if are_heroes {
-            self.type = "Hero"
-        } else {
-            self.type = "Villian"
-        }
-        self.members = createPlayer(self.type)
-        
-        
-    }
-    
-    func createHeroes() -> [Player]{
-        return createPlayer("Hero")
-    }
-    
-    func createVillians() -> [Player]{
-        return createPlayer("Villian")
-    }
-    
-    func createPlayer(type: String) -> [Player]{
-        var lineup: [Player] = []
-        var used_names: [String] = []
-        var player: Player
-        for index in 1...self.size{
-            player = uniquePlayer(type, used_names: used_names)
-            used_names.append(player.name)
-            lineup.append(player)
-        }
-        return lineup
-    }
-    
-    func uniquePlayer(type: String, used_names: [String]) -> Player {
-        var player: Player
-        if type == "Hero" {
-            player = GoodPlayer()
-        } else {
-            player = BadPlayer()
-        }
-        if contains(used_names, player.name) {
-            player = uniquePlayer(type, used_names: used_names)
-        }
-        return player
-    }
-    
-    func showLineUp(){
-        for member in self.members {
-            var output = member.name
-            output += " ["
-            output += "Strength:\(member.str), "
-            output += "Defense:\(member.def), "
-            output += "Health:\(member.health)"
-            output += "]"
-            println(output)
-        }
-    }
-    
-}
-class TeamMatch{
-    
-}
+
 //let team1 = Team(team_name: "Team 1", num_players: 3, are_heroes: true)
 //let team2 = Team(team_name: "Team 2", num_players: 3, are_heroes: false)
 ////team2.showLineUp()

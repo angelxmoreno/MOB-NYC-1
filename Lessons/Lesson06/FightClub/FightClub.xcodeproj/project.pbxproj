@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E83A62EA1A675CB100BB21E6 /* GoodWonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83A62E91A675CB100BB21E6 /* GoodWonViewController.swift */; };
 		E83A62EC1A675D9200BB21E6 /* BadWonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83A62EB1A675D9200BB21E6 /* BadWonViewController.swift */; };
+		E83A62EE1A683D4E00BB21E6 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83A62ED1A683D4E00BB21E6 /* Team.swift */; };
 		E8D2C29B1A673E48003D0D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2C29A1A673E48003D0D1A /* AppDelegate.swift */; };
 		E8D2C29D1A673E48003D0D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2C29C1A673E48003D0D1A /* ViewController.swift */; };
 		E8D2C2A01A673E48003D0D1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D2C29E1A673E48003D0D1A /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		E83A62E91A675CB100BB21E6 /* GoodWonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodWonViewController.swift; sourceTree = "<group>"; };
 		E83A62EB1A675D9200BB21E6 /* BadWonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadWonViewController.swift; sourceTree = "<group>"; };
+		E83A62ED1A683D4E00BB21E6 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		E8D2C2951A673E48003D0D1A /* FightClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FightClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D2C2991A673E48003D0D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8D2C29A1A673E48003D0D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E83A62EF1A683DAF00BB21E6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E8D2C2BA1A673E80003D0D1A /* FightClubClass.swift */,
+				E83A62ED1A683D4E00BB21E6 /* Team.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		E8D2C28C1A673E48003D0D1A = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +96,7 @@
 		E8D2C2971A673E48003D0D1A /* FightClub */ = {
 			isa = PBXGroup;
 			children = (
+				E83A62EF1A683DAF00BB21E6 /* Classes */,
 				E8D2C29A1A673E48003D0D1A /* AppDelegate.swift */,
 				E8D2C29C1A673E48003D0D1A /* ViewController.swift */,
 				E8D2C29E1A673E48003D0D1A /* Main.storyboard */,
@@ -93,7 +105,6 @@
 				E8D2C2A11A673E48003D0D1A /* Images.xcassets */,
 				E8D2C2A31A673E48003D0D1A /* LaunchScreen.xib */,
 				E8D2C2981A673E48003D0D1A /* Supporting Files */,
-				E8D2C2BA1A673E80003D0D1A /* FightClubClass.swift */,
 				E8D2C2BC1A675323003D0D1A /* MatchViewController.swift */,
 			);
 			path = FightClub;
@@ -226,6 +237,7 @@
 			files = (
 				E83A62EA1A675CB100BB21E6 /* GoodWonViewController.swift in Sources */,
 				E8D2C2BD1A675323003D0D1A /* MatchViewController.swift in Sources */,
+				E83A62EE1A683D4E00BB21E6 /* Team.swift in Sources */,
 				E8D2C2BB1A673E80003D0D1A /* FightClubClass.swift in Sources */,
 				E8D2C29D1A673E48003D0D1A /* ViewController.swift in Sources */,
 				E8D2C29B1A673E48003D0D1A /* AppDelegate.swift in Sources */,
