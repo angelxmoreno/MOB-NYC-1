@@ -14,8 +14,9 @@
 		5DCED99F19D8DC9B00DE1DC2 /* Lesson03Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCED99E19D8DC9B00DE1DC2 /* Lesson03Tests.swift */; };
 		5DCED9A919D8DF0800DE1DC2 /* ArrayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCED9A819D8DF0800DE1DC2 /* ArrayTableViewController.swift */; };
 		5DCED9AB19D8DF4E00DE1DC2 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCED9AA19D8DF4E00DE1DC2 /* Animal.swift */; };
-		E876AA401A697F1500407A3C /* geico-caveman-lg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E876AA3F1A697F1500407A3C /* geico-caveman-lg.jpg */; };
 		E876AA421A697FB100407A3C /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876AA411A697FB100407A3C /* ModalViewController.swift */; };
+		E8BB30491A6984AE00677BE3 /* Feline.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB30481A6984AE00677BE3 /* Feline.swift */; };
+		E8BB304B1A69867600677BE3 /* Catwoman-ninelives-tpb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8BB304A1A69867600677BE3 /* Catwoman-ninelives-tpb.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +41,9 @@
 		5DCED99E19D8DC9B00DE1DC2 /* Lesson03Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson03Tests.swift; sourceTree = "<group>"; };
 		5DCED9A819D8DF0800DE1DC2 /* ArrayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTableViewController.swift; sourceTree = "<group>"; };
 		5DCED9AA19D8DF4E00DE1DC2 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
-		E876AA3F1A697F1500407A3C /* geico-caveman-lg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "geico-caveman-lg.jpg"; path = "../../../../../../Pictures/geico-caveman-lg.jpg"; sourceTree = "<group>"; };
 		E876AA411A697FB100407A3C /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		E8BB30481A6984AE00677BE3 /* Feline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feline.swift; sourceTree = "<group>"; };
+		E8BB304A1A69867600677BE3 /* Catwoman-ninelives-tpb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Catwoman-ninelives-tpb.jpg"; path = "../../../../../../Pictures/Catwoman-ninelives-tpb.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,14 +85,15 @@
 		5DCED98519D8DC9B00DE1DC2 /* Lesson03 */ = {
 			isa = PBXGroup;
 			children = (
+				E8BB304A1A69867600677BE3 /* Catwoman-ninelives-tpb.jpg */,
 				5DCED9A819D8DF0800DE1DC2 /* ArrayTableViewController.swift */,
 				5DCED9AA19D8DF4E00DE1DC2 /* Animal.swift */,
+				E8BB30481A6984AE00677BE3 /* Feline.swift */,
 				5DCED98819D8DC9B00DE1DC2 /* AppDelegate.swift */,
 				5DCED98A19D8DC9B00DE1DC2 /* ViewController.swift */,
 				5DCED98C19D8DC9B00DE1DC2 /* Main.storyboard */,
 				E876AA411A697FB100407A3C /* ModalViewController.swift */,
 				5DCED98F19D8DC9B00DE1DC2 /* Images.xcassets */,
-				E876AA3F1A697F1500407A3C /* geico-caveman-lg.jpg */,
 				5DCED98619D8DC9B00DE1DC2 /* Supporting Files */,
 			);
 			path = Lesson03;
@@ -201,9 +204,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8BB304B1A69867600677BE3 /* Catwoman-ninelives-tpb.jpg in Resources */,
 				5DCED98E19D8DC9B00DE1DC2 /* Main.storyboard in Resources */,
 				5DCED99019D8DC9B00DE1DC2 /* Images.xcassets in Resources */,
-				E876AA401A697F1500407A3C /* geico-caveman-lg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +228,7 @@
 				E876AA421A697FB100407A3C /* ModalViewController.swift in Sources */,
 				5DCED9AB19D8DF4E00DE1DC2 /* Animal.swift in Sources */,
 				5DCED98B19D8DC9B00DE1DC2 /* ViewController.swift in Sources */,
+				E8BB30491A6984AE00677BE3 /* Feline.swift in Sources */,
 				5DCED98919D8DC9B00DE1DC2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
