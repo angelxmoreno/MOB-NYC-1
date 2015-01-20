@@ -60,7 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKQ-4R-03q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="282" y="-271"/>
+            <point key="canvasLocation" x="1011" y="109"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -136,7 +136,7 @@ It needs to have an image view and a dismiss button that dismisses the modal. Do
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuN-we-tcw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="407"/>
+            <point key="canvasLocation" x="1011" y="827"/>
         </scene>
     </scenes>
     <resources>
