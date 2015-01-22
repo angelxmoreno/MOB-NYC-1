@@ -36,6 +36,7 @@
 		5DCED9CF19D8E50600DE1DC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DCED9D019D8E50600DE1DC2 /* Lesson04Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson04Tests.swift; sourceTree = "<group>"; };
 		5DCED9DA19D8E6DF00DE1DC2 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E8F96C221A7073AF00422342 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../../../Lessons/Lesson08/MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				5DCED9BA19D8E50600DE1DC2 /* AppDelegate.swift */,
+				E8F96C221A7073AF00422342 /* MyPlayground.playground */,
 				5DCED9DA19D8E6DF00DE1DC2 /* MapViewController.swift */,
 				5DCED9BC19D8E50600DE1DC2 /* ArrayViewController.swift */,
 				5DCED9BE19D8E50600DE1DC2 /* Main.storyboard */,
@@ -397,6 +399,7 @@
 				5DCED9D619D8E50600DE1DC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5DCED9D719D8E50600DE1DC2 /* Build configuration list for PBXNativeTarget "Lesson04Tests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +408,7 @@
 				5DCED9D919D8E50600DE1DC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

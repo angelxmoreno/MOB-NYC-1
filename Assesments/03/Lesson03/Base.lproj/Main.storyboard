@@ -32,11 +32,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Catwoman-ninelives-tpb.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jHh-Ak-u5L">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Catwoman-ninelives-tpb.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jHh-Ak-u5L">
                                 <rect key="frame" x="150" y="20" width="300" height="450"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HD3-Xd-SsU">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HD3-Xd-SsU">
                                 <rect key="frame" x="244" y="478" width="112" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="112" id="tQb-jT-VnH"/>
