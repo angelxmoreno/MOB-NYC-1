@@ -10,16 +10,21 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
 
-    var todos = ["groceries", "homework", "walk dog"]
+    var todosArray: [TodoObj] = [TodoObj(name: "Angel", status: "Working Hard", date: NSDate())]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var session = NSUserDefaults.standardUserDefaults()
+//        session.setValue(todosArray, forKey: "todosArrayKey")
+//                session.se
+//        NSUserDefaults.standardUserDefaults().setObject("Bob", forKey: "myName")
+        
+        //@TODO: is this part below needed? Why? When?
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        println(NSUserDefaults.standardUserDefaults().objectForKey("myName")!)
+        
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -27,29 +32,24 @@ class MainTableViewController: UITableViewController {
         destination.todoViewController = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         self.tableView.reloadData()
     }
     
-    // MARK: - Table view data source
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todos.count
+        return todosArray.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = todos[indexPath.row]
+        cell.textLabel?.text = todosArray[indexPath.row].prettyString()
+        
         return cell
     }
 

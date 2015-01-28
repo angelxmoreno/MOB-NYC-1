@@ -10,25 +10,26 @@ import UIKit
 
 class ModalViewController: UIViewController {
 
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var nameInput: UITextField!
+    @IBOutlet weak var statusInput: UITextField!
+    @IBOutlet weak var dateInput: UIDatePicker!
     var todoViewController: MainTableViewController?
     
     @IBAction func didTapButton(sender: AnyObject) {
-        todoViewController?.todos.append(textField.text)
-        
+        let newTodo = TodoObj(
+            name: nameInput.text,
+            status: statusInput.text,
+            date: dateInput.date
+        )
+        todoViewController?.todosArray.append(newTodo)
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let currentDate = NSDate()
+        dateInput.minimumDate = currentDate
+        dateInput.date = currentDate
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

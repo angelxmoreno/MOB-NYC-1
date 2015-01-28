@@ -14,6 +14,7 @@
 		5D6592C01A70807A00649D3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D6592BE1A70807A00649D3D /* LaunchScreen.xib */; };
 		5D6592CC1A70807A00649D3D /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6592CB1A70807A00649D3D /* TodoTests.swift */; };
 		5D6592D81A70824900649D3D /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6592D71A70824900649D3D /* MainTableViewController.swift */; };
+		E8F96C251A709F2100422342 /* TodoObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F96C241A709F2100422342 /* TodoObj.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		5D6592CA1A70807A00649D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D6592CB1A70807A00649D3D /* TodoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTests.swift; sourceTree = "<group>"; };
 		5D6592D71A70824900649D3D /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		E8F96C241A709F2100422342 /* TodoObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoObj.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		5D6592B21A70807A00649D3D /* Todo */ = {
 			isa = PBXGroup;
 			children = (
+				E8F96C231A709F0500422342 /* Classes */,
 				5D6592B51A70807A00649D3D /* AppDelegate.swift */,
 				5D6592B71A70807A00649D3D /* ModalViewController.swift */,
 				5D6592B91A70807A00649D3D /* Main.storyboard */,
@@ -113,6 +116,14 @@
 				5D6592CA1A70807A00649D3D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E8F96C231A709F0500422342 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E8F96C241A709F2100422342 /* TodoObj.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D6592B81A70807A00649D3D /* ModalViewController.swift in Sources */,
+				E8F96C251A709F2100422342 /* TodoObj.swift in Sources */,
 				5D6592D81A70824900649D3D /* MainTableViewController.swift in Sources */,
 				5D6592B61A70807A00649D3D /* AppDelegate.swift in Sources */,
 			);
@@ -409,6 +421,7 @@
 				5D6592D11A70807A00649D3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D6592D21A70807A00649D3D /* Build configuration list for PBXNativeTarget "TodoTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +430,7 @@
 				5D6592D41A70807A00649D3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
