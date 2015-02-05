@@ -69,21 +69,24 @@ class ViewController: UIViewController {
         })
     }
     
-    func springsAndStrutsLayout() {
-        let topMargin: CGFloat = 50
-        let size: CGFloat = 15
-        var leftEye = UIView(frame: CGRect(x: self.view.frame.size.width/4, y: topMargin, width: size, height: size))
-        var rightEye = UIView(frame: CGRect(x: self.view.frame.size.width * 0.75, y: topMargin, width: size, height: size))
-        
-        leftEye.backgroundColor = UIColor.purpleColor()
-        rightEye.backgroundColor = UIColor.orangeColor()
-        
-        leftEye.autoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleLeftMargin
-        rightEye.autoresizingMask = UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleRightMargin
-        
-        view.addSubview(leftEye)
-        view.addSubview(rightEye)
-    }
+//    func springsAndStrutsLayout() {
+//        let topMargin: CGFloat = 50
+//        let size: CGFloat = 15
+//        
+//        var leftEye = UIView()
+//        var rightEye = UIView()
+//        var nose = UIView()
+//        var mouth = UIView()
+//            
+//        leftEye.backgroundColor = UIColor.purpleColor()
+//        rightEye.backgroundColor = UIColor.orangeColor()
+//        nose.backgroundColor = UIColor.yellowColor()
+//        mouth.backgroundColor = UIColor.redColor()
+//                view.addSubview(leftEye)
+//        view.addSubview(rightEye)
+//        view.addSubview(nose)
+//        view.addSubview(mouth)
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
