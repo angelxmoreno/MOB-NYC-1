@@ -14,17 +14,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        autolayout()
+//        autolayout()
     }
     
     func autolayout() {
         var leftEye = UIView()
-        var rightEye = UIView()
-        leftEye.setTranslatesAutoresizingMaskIntoConstraints(false)
-        rightEye.setTranslatesAutoresizingMaskIntoConstraints(false)
-        view.addSubview(leftEye)
-        view.addSubview(rightEye)
         leftEye.backgroundColor = UIColor.redColor()
+        leftEye.setTranslatesAutoresizingMaskIntoConstraints(false)
+        view.addSubview(leftEye)
         
         view.addConstraint(NSLayoutConstraint(
             item: leftEye,
@@ -32,8 +29,9 @@ class ViewController: UIViewController {
             relatedBy: .Equal,
             toItem: view,
             attribute: .Top,
-            multiplier: 1.0,
-            constant: 0))
+            multiplier: 2.0,
+            constant: 50))
+        
         view.addConstraint(NSLayoutConstraint(
             item: leftEye,
             attribute: .CenterX,
@@ -58,6 +56,13 @@ class ViewController: UIViewController {
             attribute: NSLayoutAttribute.NotAnAttribute,
             multiplier: 1.0,
             constant: 50))
+        
+        
+        var rightEye = UIView()
+        rightEye.setTranslatesAutoresizingMaskIntoConstraints(false)
+//        view.addSubview(rightEye)
+        
+        
         
         leftEye.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "didTap"))
     }
