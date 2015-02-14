@@ -20,6 +20,14 @@ class MainTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let a = UIButton()
+        
+        a.addTarget(
+            self,
+            action: "didTap:",
+            forControlEvents: UIControlEvents.TouchUpInside
+        )
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -9,6 +9,8 @@
 import UIKit
 
 class FirstViewController: ExerciseViewController {
+    let redBox = UIView()
+    let blackBox = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,4 +37,5 @@ class FirstViewController: ExerciseViewController {
     func next() {
         self.performSegueWithIdentifier("two", sender: nil)
     }
+    
 }

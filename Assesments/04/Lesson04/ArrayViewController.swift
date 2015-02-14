@@ -15,7 +15,7 @@ class ArrayViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var items: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        buildButtons()
         /*
         TODO one: Add a table view AND a text input box to this view controller, either in code or via the storyboard. Accept keyboard input from the text view when the return key is pressed. Add the string that was entered into the text view into an array of strings (stored in this class).
         TODO two: Make this class a UITableViewDelegate and UITableViewDataSource that supply the above table view with cells. These cells should correspond to the text entered into the text box. E.g. If the text "one", then "two", then "three" was entered into the text box, there should be three cells in this table view that contain those strings in order.
@@ -66,6 +66,9 @@ class ArrayViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func buildButtons() {
     }
     
     
