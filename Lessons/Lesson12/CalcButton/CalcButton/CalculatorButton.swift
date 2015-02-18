@@ -10,8 +10,8 @@ import UIKit
 
 class CalculatorButton: UIButton {
     var label: UILabel = UILabel()
-    var highlightedColor: UIColor?
-    var originalBackgroundColor: UIColor?
+    var highlightedColor: UIColor = UIColor.blueColor()
+    var originalBackgroundColor: UIColor = UIColor.redColor()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -43,18 +43,20 @@ class CalculatorButton: UIButton {
         label.textAlignment = .Center
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        self.originalBackgroundColor = self.backgroundColor
-        self.backgroundColor = highlightedColor
-    }
-    
-    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
-        func animatedThings() {
-            self.backgroundColor = self.originalBackgroundColor
-        }
-        UIView.animateWithDuration(0.5, animations: {() -> Void in
-                self.backgroundColor = self.originalBackgroundColor
-            }
-        )        
-    }
+//    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+//        self.originalBackgroundColor = self.backgroundColor!
+//        self.backgroundColor = highlightedColor
+//        super.touchesBegan(touches, withEvent: event)
+//    }
+//    
+//    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+//        func animatedThings() {
+//            self.backgroundColor = self.originalBackgroundColor
+//        }
+//        UIView.animateWithDuration(0.5, animations: {() -> Void in
+//                self.backgroundColor = self.originalBackgroundColor
+//            }
+//        )
+//        super.touchesEnded(touches, withEvent: event)
+//    }
 }
