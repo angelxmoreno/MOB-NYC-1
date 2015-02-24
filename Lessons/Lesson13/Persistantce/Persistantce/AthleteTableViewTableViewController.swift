@@ -1,54 +1,67 @@
 //
-//  MainTableViewController.swift
-//  Todo
+//  AthleteTableViewTableViewController.swift
+//  Persistantce
 //
-//  Created by Rudd Taylor on 1/21/15.
-//  Copyright (c) 2015 GA. All rights reserved.
+//  Created by Angel S. Moreno on 2/18/15.
+//  Copyright (c) 2015 Angel S. Moreno. All rights reserved.
 //
 
 import UIKit
 
-class MainTableViewController: UITableViewController {
-
-    var todosArray: [TodoObj] = [TodoObj(name: "Angel", status: "Working Hard", date: NSDate())]
-    
+class AthleteTableViewTableViewController: UITableViewController {
+    var items:  [String] = []
+    var athletes: [String]?
+    let defaultAthletes = [
+        "Bo Jackson",
+        "Michael Jordan",
+        "Babe Ruth"
+    ]
     override func viewDidLoad() {
         super.viewDidLoad()
-        var session = NSUserDefaults.standardUserDefaults()
-//        session.setValue(todosArray, forKey: "todosArrayKey")
-//                session.se
-//        NSUserDefaults.standardUserDefaults().setObject("Bob", forKey: "myName")
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        //@TODO: is this part below needed? Why? When?
-        NSUserDefaults.standardUserDefaults().synchronize()
-
+        if let athletes = NSUserDefaults.standardUserDefaults().arrayForKey("athletes") as? [String] {
+            self.athletes = athletes
+        } else {
+            self.athletes = self.defaultAthletes
+            NSUserDefaults.standardUserDefaults().setObject(self.athletes, forKey: "athletes")
+        }
+        
+        self.items = self.athletes!
+        printCoaches()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var destination = segue.destinationViewController as ModalViewController
-        destination.todoViewController = self
-    }
-
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        self.tableView.reloadData()
+    func printCoaches(){
+        if let path = NSBundle.mainBundle().pathForResource("Coaches", ofType: "plist"){
+            let coaches = NSArray(contentsOfFile: path)
+            println(coaches)
+        }
     }
     
+    // MARK: - Table view data source
+
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todosArray.count
+        return items.count
     }
 
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = todosArray[indexPath.row].prettyString()
-        
+        cell.textLabel?.text = self.items[indexPath.row]
+
         return cell
     }
+    
 
     /*
     // Override to support conditional editing of the table view.
