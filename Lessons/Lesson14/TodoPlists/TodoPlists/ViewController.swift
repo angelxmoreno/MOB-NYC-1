@@ -22,6 +22,17 @@ class ViewController: UIViewController, UITableViewDataSource, UIAlertViewDelega
         if buttonIndex != alertView.cancelButtonIndex {
             if let textInAlert = alertView.textFieldAtIndex(0)?.text {
                 self.items.append(textInAlert)
+                if let path = getPath() {
+                    let itemsToStore: NSArray = NSArray(array: self.items)
+                    if itemsToStore.writeToFile(path, atomically: true) {
+                        println("I saved")
+                    } else {
+                        println("I failed")
+                    }
+                    println(itemsToStore)
+                    println(path)
+                }
+                
                 self.tableView.reloadData()
             }
         }
@@ -31,6 +42,16 @@ class ViewController: UIViewController, UITableViewDataSource, UIAlertViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if let path = getPath(){
+            if let storedItems = NSArray(contentsOfFile: path) {
+                self.items = []
+                for storedItem in storedItems {
+                    var singleItem = storedItem as String
+                    self.items.append(singleItem)
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,6 +75,10 @@ class ViewController: UIViewController, UITableViewDataSource, UIAlertViewDelega
         var stringAtSpecifiedIndex = self.items[indexPath.row]
         cell.textLabel?.text = stringAtSpecifiedIndex
         return cell
+    }
+    
+    func getPath() -> String? {
+        return NSBundle.mainBundle().pathForResource("ToDosPlist", ofType: "plist")
     }
 }
 
