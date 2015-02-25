@@ -9,10 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UIAlertViewDelegate {
-
+    
     var items: [String] = []
+    var getPath: NSURL {
+        get {
+            let url = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0] as NSURL
+            
+            let fileUrl = url.URLByAppendingPathComponent("ToDos.plist")
+            return fileUrl
+        }
+    }
     
     @IBAction func didTapAdd(sender: AnyObject) {
+
         var alert = UIAlertView(title: "Item Name?", message: "Enter an item name", delegate: self, cancelButtonTitle: "Dismiss", otherButtonTitles: "Add")
         alert.alertViewStyle = UIAlertViewStyle.PlainTextInput
         alert.show()
@@ -22,16 +31,13 @@ class ViewController: UIViewController, UITableViewDataSource, UIAlertViewDelega
         if buttonIndex != alertView.cancelButtonIndex {
             if let textInAlert = alertView.textFieldAtIndex(0)?.text {
                 self.items.append(textInAlert)
-                if let path = getPath() {
-                    let itemsToStore: NSArray = NSArray(array: self.items)
-                    if itemsToStore.writeToFile(path, atomically: true) {
-                        println("I saved")
-                    } else {
-                        println("I failed")
-                    }
-                    println(itemsToStore)
-                    println(path)
+                let itemsToStore: NSArray = NSArray(array: self.items)
+                if itemsToStore.writeToURL(getPath, atomically: true) {
+                    println("I saved")
+                } else {
+                    println("I failed")
                 }
+                println(itemsToStore)
                 
                 self.tableView.reloadData()
             }
@@ -42,23 +48,20 @@ class ViewController: UIViewController, UITableViewDataSource, UIAlertViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        if let path = getPath(){
-            if let storedItems = NSArray(contentsOfFile: path) {
-                self.items = []
-                for storedItem in storedItems {
-                    var singleItem = storedItem as String
-                    self.items.append(singleItem)
-                }
+        if let storedItems = NSArray(contentsOfURL: getPath) {
+            self.items = []
+            for storedItem in storedItems {
+                var singleItem = storedItem as String
+                self.items.append(singleItem)
             }
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -77,8 +80,6 @@ class ViewController: UIViewController, UITableViewDataSource, UIAlertViewDelega
         return cell
     }
     
-    func getPath() -> String? {
-        return NSBundle.mainBundle().pathForResource("ToDosPlist", ofType: "plist")
-    }
+    
 }
 
