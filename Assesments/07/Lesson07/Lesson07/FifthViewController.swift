@@ -10,9 +10,37 @@ import UIKit
 
 class FifthViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var fifthViewControllerView: UITextView!
+    var getPath: NSURL {
+        get {
+            let url = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0] as NSURL
+            
+            let fileUrl = url.URLByAppendingPathComponent("ToDo5Text")
+            return fileUrl
+        }
     }
+    
+    var toDo5TextAsArray: NSArray {
+        get{
+            if let storedItems = NSArray(contentsOfURL: getPath) {
+                return storedItems
+            }
+            return NSArray()
+        }
+        
+        set {
+            let itemsToStore: NSArray = NSArray(array: [newValue])
+            if itemsToStore.writeToURL(getPath, atomically: true) {
+                println("I saved")
+            } else {
+                println("I failed")
+            }
+        }
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.toDo5TextAsArray = fifthViewControllerView.text.componentsSeparatedByString(" ")
+    }
+
+    
 }
