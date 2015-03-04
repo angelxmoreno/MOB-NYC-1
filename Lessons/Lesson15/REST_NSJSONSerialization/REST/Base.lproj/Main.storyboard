@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Reddit!-->
+        <!--Mashable!!-->
         <scene sceneID="lzF-Q5-okc">
             <objects>
                 <tableViewController id="8qO-Ar-3Fb" customClass="ViewController" customModule="REST" customModuleProvider="target" sceneMemberID="viewController">
@@ -14,10 +14,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="I4b-zP-CTr">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="zgN-fg-0Iu" detailTextLabel="AuH-Oa-aXx" style="IBUITableViewCellStyleSubtitle" id="I4b-zP-CTr">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I4b-zP-CTr" id="2aY-0l-GCO">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zgN-fg-0Iu">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AuH-Oa-aXx">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -26,7 +40,7 @@
                             <outlet property="delegate" destination="8qO-Ar-3Fb" id="dDU-0O-Z4q"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Reddit!" id="UVG-cd-joc"/>
+                    <navigationItem key="navigationItem" title="Mashable!!" id="UVG-cd-joc"/>
                     <connections>
                         <segue destination="SDd-H7-oe9" kind="show" identifier="web" id="ML1-AU-LEy"/>
                     </connections>
