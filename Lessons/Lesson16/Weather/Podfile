@@ -2,14 +2,12 @@
 # platform :ios, '6.0'
 
 use_frameworks!
-target 'Weather Checker' do
 
+target 'Weather' do
+pod 'SwiftyJSON'
 end
 
-target 'Weather CheckerTests' do
-
-pod 'Alamofire'
-pod 'SwiftyJSON'
+target 'WeatherTests' do
 
 end
 
